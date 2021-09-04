@@ -40,3 +40,13 @@ Initialize Prisma
 ```bash
 npx prisma init
 ```
+
+## Postgre SQL
+
+Using from docker image
+
+```bash
+docker pull postgres
+# into project folder
+docker run --name awesome-links_postgres --env-file ./.env -d postgres
+```
