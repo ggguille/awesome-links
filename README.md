@@ -1,3 +1,5 @@
+# Awesome links
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -47,9 +49,23 @@ Sync Database Schema
 npx prisma db push
 ```
 
+Seeding Database
+
+```bash
+npx prisma db seed --preview-feature
+```
+
+> Note: we need to add **ts-node** dependency and **"ts-node": "ts-node --compiler-options '{\"module\":\"CommonJS\"}'"** script in package.json
+
+Open Prisma Studio
+
+```bash
+npx prisma studio
+```
+
 ## Postgre SQL
 
-Using from docker image https://hub.docker.com/_/postgres
+Using from docker image <https://hub.docker.com/_/postgres>
 
 ```bash
 docker pull postgres
