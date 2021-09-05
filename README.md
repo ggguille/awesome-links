@@ -49,6 +49,14 @@ Sync Database Schema
 npx prisma db push
 ```
 
+Seeding Database
+
+```bash
+npx prisma db seed --preview-feature
+```
+
+> Note: we need to add **ts-node** dependency and **"ts-node": "ts-node --compiler-options '{\"module\":\"CommonJS\"}'"** script in package.json
+
 ## Postgre SQL
 
 Using from docker image <https://hub.docker.com/_/postgres>
