@@ -57,6 +57,12 @@ npx prisma db seed --preview-feature
 
 > Note: we need to add **ts-node** dependency and **"ts-node": "ts-node --compiler-options '{\"module\":\"CommonJS\"}'"** script in package.json
 
+Open Prisma Studio
+
+```bash
+npx prisma studio
+```
+
 ## Postgre SQL
 
 Using from docker image <https://hub.docker.com/_/postgres>
