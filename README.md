@@ -41,12 +41,18 @@ Initialize Prisma
 npx prisma init
 ```
 
+Sync Database Schema
+
+```bash
+npx prisma db push
+```
+
 ## Postgre SQL
 
-Using from docker image
+Using from docker image https://hub.docker.com/_/postgres
 
 ```bash
 docker pull postgres
 # into project folder
-docker run --name awesome-links_postgres --env-file ./.env -d postgres
+docker run --name awesome-links_postgres --env-file ./.env -p 5432:5432 -d postgres
 ```
