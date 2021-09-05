@@ -1,3 +1,5 @@
+# Awesome links
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -49,7 +51,7 @@ npx prisma db push
 
 ## Postgre SQL
 
-Using from docker image https://hub.docker.com/_/postgres
+Using from docker image <https://hub.docker.com/_/postgres>
 
 ```bash
 docker pull postgres
