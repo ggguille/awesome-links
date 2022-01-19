@@ -20,7 +20,13 @@ export const AwesomeLink = ({
 }: LinkModel) => {
   return (
     <div key={id} className="shadow  max-w-md  rounded">
-      <Image className="shadow-sm" src={imageUrl} alt="Link image" />
+      <Image 
+        className="shadow-sm" 
+        src={imageUrl} 
+        alt={`Link image to ${url}`} 
+        width={640}
+        height={366}
+      />
       <div className="p-5 flex flex-col space-y-2">
         <p className="text-sm text-blue-500">{category}</p>
         <p className="text-lg font-medium">{title}</p>
