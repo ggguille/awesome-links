@@ -1,5 +1,20 @@
 # Awesome links
 
+Project to learn Prisma ORM, using Nextjs, TailwindCSS and PostgreSQL PostgreSQL
+
+## Resources
+
+[Youtube playlist](https://www.youtube.com/playlist?list=PLn2e1F9Rfr6k6MwzS-p9FGK1NDBxxwLPk)
+
+### Blog posts
+
+[Part 1](https://www.prisma.io/blog/fullstack-nextjs-graphql-prisma-oklidw1rhw)
+[Part 2](https://www.prisma.io/blog/fullstack-nextjs-graphql-prisma-2-fwpc6ds155)
+
+### Repository
+
+[Github repo](https://github.com/m-abdelwahab/awesome-links)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -65,10 +80,12 @@ npx prisma studio
 
 ## Postgre SQL
 
-Using from docker image <https://hub.docker.com/_/postgres>
+Using from docker image <https://hub.docker.com/_/postgres> and docker compose file
 
 ```bash
 docker pull postgres
 # into project folder
 docker run --name awesome-links_postgres --env-file ./.env -p 5432:5432 -d postgres
+# or
+docker-compose up
 ```
