@@ -1,0 +1,12 @@
+version: "3"
+services:
+  postgres:
+    image: "postgres"
+    ports:
+      - 5432:5432
+    environment: 
+      - POSTGRES_USER=awesome-links-user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=awesome-links
+    volumes: 
+      - C:\Docker\PostgreSql\data:/var/lib/postgresql/data
