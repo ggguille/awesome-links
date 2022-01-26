@@ -93,3 +93,7 @@ docker-compose up
 ## Apollo
 
 [Apollo Studio](https://studio.apollographql.com/)
+
+## Nexus
+
+[Nexusjs](https://nexusjs.org/)
