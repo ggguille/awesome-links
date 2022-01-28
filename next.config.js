@@ -9,4 +9,7 @@ module.exports = {
       'www.apollographql.com'
     ],
   },
+  env: {
+    GRAPHQL_URI: process.env.GRAPHQL_URI
+  }
 }
