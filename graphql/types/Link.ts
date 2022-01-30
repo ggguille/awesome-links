@@ -62,20 +62,49 @@ export const LinkQuery = extendType({
                 after: stringArg()
             },
             async resolve(_, args, ctx) {
-                return {
-                    edges: [
-                        {
-                            cursor: '',
-                            node: {
-                                category: "",
-                                description: "",
-                                id: "",
-                                imageUrl: "",
-                                title: "",
-                                url: ""
-                            }
+                const {
+                    first = 0,
+                    after = ''
+                } = args
+                let queryResults = null
+                if (after) {
+                    queryResults = await ctx.prisma.link.findMany({
+                        take: first as number,
+                        skip: 1,
+                        cursor: {
+                            id: after
                         }
-                    ],
+                    })
+                } else {
+                    queryResults = await ctx.prisma.link.findMany({
+                        take: first as number
+                    })
+                }
+
+                if (queryResults.length) {
+                    const lastLinkInResults = queryResults[queryResults.length -1]
+                    const myCursor = lastLinkInResults.id
+                    const secondQueryResults = await ctx.prisma.link.findMany({
+                        take: first as number,
+                        cursor: {
+                            id: myCursor
+                        }
+                    })
+                    
+                    return {
+                        pageInfo: {
+                            endCursor: myCursor,
+                            hasNextPage: secondQueryResults.length >= (first as number)
+                        },
+                        edges: queryResults.map(link => ({
+                            cursor: link.id,
+                            node: link
+                        }))
+                    }
+                }
+                // empty result
+                return {
+                    edges: [],
                     pageInfo: {
                         endCursor: '',
                         hasNextPage: false
